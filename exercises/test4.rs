@@ -5,10 +5,13 @@
 
 // Write a macro that passes the test! No hints this time, you can do it!
 
-// I AM NOT DONE
-
 #[cfg(test)]
 mod tests {
+    macro_rules! my_macro {
+        ($val:expr) => {
+            concat!("Hello ", $val)
+        };
+    }
     use super::*;
 
     #[test]
